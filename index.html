@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>habede adik kicil</title>
+  <meta name="description" content="Website Ulang Tahun Interaktif Bergaya Neo-Brutalism!">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background Music Audio Element (User puts music.mp3 in assets folder) -->
+  <audio id="bg-music" loop src="assets/music.mp3" preload="auto"></audio>
+
+  <!-- Custom Cursor element (desktop) -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+
+  <!-- Confetti Canvas overlay -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Sticky Header Controls -->
+  <div class="top-bar">
+    <button class="brutal-btn brutal-btn-yellow" id="music-toggle-btn" title="Toggle Background Music">
+      <span id="music-icon">🎵 MUSIC: ON</span>
+    </button>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ==========================================
+       1. HERO SECTION
+       ========================================== -->
+  <header class="hero-section" id="hero">
+    <!-- Huge background watermark of the age number -->
+    <div class="hero-bg-watermark" id="bg-watermark-age">16</div>
+
+    <!-- Decorative Floating Stickers -->
+    <img src="assets/sticker_star.png" alt="Star Sticker" class="sticker hero-sticker-1">
+    <div class="starburst sticker hero-sticker-2">PETJAH NEAN</div>
+    <div class="tape-strip tape-strip-pink hero-sticker-3">UWOWWWW</div>
+    <div class="brutal-badge hero-sticker-4">CIHUYYY</div>
+
+    <!-- User Custom Image Stickers (stiker1.jpg & stiker2.jpg) -->
+    <img src="assets/stiker1.jpg" alt="Stiker 1" class="sticker hero-sticker-img hero-sticker-5">
+    <img src="assets/stiker2.jpg" alt="Stiker 2" class="sticker hero-sticker-img hero-sticker-6">
+
+    <div class="container hero-content">
+      <div class="brutal-badge hero-pill">
+        <span>✨ IT'S YOUR SPECIAL DAY! ✨</span>
+      </div>
+
+      <h1 class="hero-main-title">
+        <span class="line-1">HAPPY</span>
+        <span class="line-2">BIRTHDAY!</span>
+      </h1>
+
+      <div class="hero-name-badge">
+        <span id="display-name">Khania</span>
+      </div>
+
+      <div class="hero-meta-row">
+        <div class="meta-chip">
+          <span>📅</span>
+          <span id="display-date">13 AGUSTUS</span>
+        </div>
+        <div class="meta-chip" style="background-color: var(--pink); color: #FFF;">
+          <span></span>
+          <span id="display-age">16</span> TH
+        </div>
+      </div>
+
+      <div class="hero-btn-group">
+        <a href="#card-section" class="brutal-btn brutal-btn-yellow" id="btn-celebrate">
+          PENCET
+        </a>
+        <a href="#surprise-section" class="brutal-btn brutal-btn-cyan" id="btn-surprise-hero">
+          PENCET JUGA
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       2. BIRTHDAY CARD SECTION
+       ========================================== -->
+  <section class="section-padding card-section" id="card-section">
+    <div class="container">
+      <div class="poster-card">
+        <!-- Sticky tape top banner -->
+        <div class="tape-strip tape-strip-cyan">KHANIA MURALIE</div>
+
+        <div class="poster-card-header">
+          <div class="poster-stamp">WE LOVE YOU NIAWWW</div>
+          <div class="brutal-badge" style="background-color: var(--green);">★ CERTIFIED AWESOME</div>
+        </div>
+
+        <div class="poster-quote">
+          "Today isn't just another day.<br>It's the day the world got a little more awesome."
+        </div>
+
+        <div class="poster-message" id="display-message">
+          Hepibidi, <span class="inject-name">NIAWWW</span>!<br>
+          Ultah yeee, selamat ulang tahun ading ku, may Allah bless u in every way u take, berapapun bertambahnya umur
+          kau, you always be my little sista everytime, having sister like u is the greatest thing god give me, i would
+          choose u as my adik kecil again in every universe i exist, jangan lupa sholat dan berdoa ke Allah yaa, sayangi
+          orang tua dan saudara.
+        </div>
+
+        <div class="poster-decor-star starburst" style="background-color: var(--yellow); color: var(--black);">
+          WOWOWOWOWO
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. MEMORY GALLERY SECTION
+       ========================================== -->
+  <section class="section-padding gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="section-subtitle">PARADISE OF MEMORIES</div>
+        <h2 class="section-title">NIWAW WO AI NI YO</h2>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Card 1 -->
+        <div class="photo-card" data-index="0">
+          <div class="photo-frame">
+            <img src="assets/photo_1.png" alt="Memory 1" id="img-0">
+          </div>
+          <div class="photo-caption" id="caption-0">OMAK MELED YA</div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="photo-card" data-index="1">
+          <div class="photo-frame">
+            <img src="assets/photo_2.png" alt="Memory 2" id="img-1">
+          </div>
+          <div class="photo-caption" id="caption-1">CANTIK BANGET KEBAYANYA</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="photo-card" data-index="2">
+          <div class="photo-frame">
+            <img src="assets/photo_3.png" alt="Memory 3" id="img-2">
+          </div>
+          <div class="photo-caption" id="caption-2">AGAK ALAY TAPI OKE</div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="photo-card" data-index="3">
+          <div class="photo-frame">
+            <img src="assets/photo_4.png" alt="Memory 4" id="img-3">
+          </div>
+          <div class="photo-caption" id="caption-3">ALABIKKKK</div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="photo-card" data-index="4">
+          <div class="photo-frame">
+            <img src="assets/photo_5.png" alt="Memory 5" id="img-4">
+          </div>
+          <div class="photo-caption" id="caption-4">LUCUUUK</div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="photo-card" data-index="5">
+          <div class="photo-frame">
+            <img src="assets/photo_6.png" alt="Memory 6" id="img-5">
+          </div>
+          <div class="photo-caption" id="caption-5">BUNGA SAMO ORANGNYO CANTIKKK</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. SURPRISE SECTION
+       ========================================== -->
+  <section class="section-padding surprise-section" id="surprise-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="section-subtitle" style="background-color: var(--yellow);">SECRET UNLOCK</div>
+        <h2 class="section-title">WAIT... THERE'S MORE FROM UR DANG.</h2>
+      </div>
+
+      <!-- 3D Interactive Gift Box -->
+      <div class="gift-box-wrap" id="gift-box-trigger">
+        <div class="gift-box" id="gift-box">
+          <div class="gift-lid">
+            <div class="gift-bow"></div>
+          </div>
+          <div class="gift-ribbon-vertical"></div>
+          <div class="gift-ribbon-horizontal"></div>
+        </div>
+      </div>
+
+      <button class="brutal-btn brutal-btn-pink" id="open-surprise-btn" style="font-size: 1.3rem; padding: 16px 36px;">
+        OPEN YOUR SURPRISE
+      </button>
+
+      <!-- Revealed Secret Card -->
+      <div class="surprise-card-reveal" id="surprise-card-reveal">
+        <div class="tape-strip tape-strip-green">TOP SECRET</div>
+        <div class="surprise-big-text">
+          "Nia deserves every good things."
+        </div>
+        <p style="font-size: 1.15rem; font-weight: 700; color: var(--black);">
+          May this year bring unlimited joy, semoga dengan bertambahnya usia Nia, Nia jadi semakin lebih dewasa dan jadi
+          lebih baik dari diri Nia sebelumnyo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. BIRTHDAY WISHES SECTION (THE WISH WALL)
+       ========================================== -->
+  <section class="section-padding wishes-section" id="wishes-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="section-subtitle">MESSAGES FROM DANG</div>
+        <h2 class="section-title">BIRTHDAY WISHES</h2>
+      </div>
+
+      <div class="wishes-grid" id="wishes-grid">
+        <!-- Default Wish Card 1 -->
+        <div class="wish-card wish-card-yellow">
+          <div class="tape-strip">KEEP SMILING</div>
+          <div class="wish-text">"SENYUM TERUS YA, JANGAN PUDAR"</div>
+          <div class="wish-author">✦ FROM DIDODD</div>
+        </div>
+
+        <!-- Default Wish Card 2 -->
+        <div class="wish-card wish-card-pink">
+          <div class="tape-strip tape-strip-cyan">KEEP EXPLORING</div>
+          <div class="wish-text">"SEMOGA PAS KEJURPROV NANTI PERFORMNYA MAHADASYAT"</div>
+          <div class="wish-author">✦ FROM DADID</div>
+        </div>
+
+        <!-- Default Wish Card 3 -->
+        <div class="wish-card wish-card-cyan">
+          <div class="tape-strip tape-strip-green">KEEP KIND</div>
+          <div class="wish-text">"SELALU BERBUAT BAIK KE SIAPAPUN ITU"</div>
+          <div class="wish-author">✦ FROM DADID LAGI</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. FINAL SECTION (THE GRAND FINALE)
+       ========================================== -->
+  <footer class="final-section" id="final-section">
+    <div class="container" style="position: relative; z-index: 5;">
+      <h2 class="final-big-banner">
+        ANOTHER YEAR.<br>ANOTHER HAPPINESS.
+      </h2>
+
+      <div class="final-subtext">
+        HAPPY BIRTHDAY,<br>
+        <span class="inject-name">NIAWWWW</span>
+      </div>
+
+      <div style="margin-top: 30px;">
+        <button class="brutal-btn brutal-btn-yellow" id="final-confetti-btn">
+          PENCETTT!
+        </button>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==========================================
+       MODALS
+       ========================================== -->
+
+  <!-- Modal: Photo Card Preview Lightbox Modal -->
+  <div class="modal-overlay" id="photo-view-modal">
+    <div class="brutal-modal photo-preview-modal">
+      <button class="modal-close-btn" id="photo-view-close">&times;</button>
+      <div class="tape-strip tape-strip-pink">MEMORY SNAPSHOT 📸</div>
+      <div class="photo-view-frame">
+        <img src="" id="photo-view-img" alt="Zoomed Photo Card">
+      </div>
+      <div class="photo-view-caption" id="photo-view-caption">CAPTION HERE</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
