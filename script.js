@@ -268,8 +268,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       playFanfareSound();
       surpriseReveal.classList.add('active');
-      openSurpriseBtn.textContent = '🎉 CELEBRATE AGAIN!';
-      showToast('Surprise Unlocked! 🎁');
+      openSurpriseBtn.textContent = 'PENCETTT INII';
+      showToast('YEAYYY');
     }, 450);
   }
 
